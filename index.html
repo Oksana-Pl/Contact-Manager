@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacts Manager</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="manifest" href="manifest.json">
+    </head>
+    <body>
+      <h2>Contacts Manager</h2>
+        <form>
+            <label for="fname">First Name:</label>
+            <input id="first-name" type="text" placeholder="Enter First Name"> <br>
+
+            <label for="surname">Surname:</label>
+            <input id="surname" type="text" placeholder="Enter Surname"> <br>
+
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="e.g. myemail@gmail.com"> <br>
+
+            <label for="telephone">Telephone Number:</label>
+            <input id="telephone" type="tel" placeholder="e.g. 0871234567" maxlength="10" inputmode="numeric"> <br>
+        </form>
+
+        <button id="myButton">Add contact</button><br>
+
+
+        <!-- mobile sort dropdown -->
+        <div id="mobileSortWrapper" class="mobile-sort">
+          <label for="sortSelect" style: >Sort by:</label>   
+          <select id="sortSelect" style="text-align: center;">
+            <option value="">-- Select --</option>
+            <option value="sortByName">Name</option>
+            <option value="sortBySurname">Surname</option>
+            <option value="sortByEmail">Email</option>
+            <option value="sortByTelephone">Telephone Number</option>
+          </select>
+        </div>
+
+        <table id="theTable">
+            <thead>
+              <tr>
+                <th id="sortByName" scope="col">First Name</th>
+                <th id="sortBySurname" scope="col">Surname</th>
+                <th id="sortByEmail" scope="col">Email</th>
+                <th id="sortByTelephone" scope="col">Telephone</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+          </table>
+
+          <div id="cardsContainer"></div>
+          
+        <script src="script.js"></script>
+    </body>
+</html>
